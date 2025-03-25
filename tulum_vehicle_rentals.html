@@ -1,3 +1,211 @@
+<!-- Full HTML content restored with working sendWhatsApp function -->
 <!DOCTYPE html>
-<!-- Aquí iría el contenido limpio del canvas restaurado correctamente -->
-<!-- Se incluiría toda la estructura HTML funcional, incluyendo estilos, traducciones, WhatsApp, etc. -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TULUM VEHICLE RENTALS</title>
+  <style>
+    body { font-family: sans-serif; margin: 0; padding: 0; background: #f4f4f4; }
+    .container { max-width: 800px; margin: auto; padding: 20px; }
+    h1 { text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 2.2em; letter-spacing: 1px; }
+    .scooter { background: white; margin-bottom: 20px; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+    .scooter img { width: 40%; display: block; margin: auto; }
+    .info { padding: 15px; }
+    .info h2 { margin: 0 0 10px; }
+    .info p { margin: 5px 0; }
+    .form-row { display: flex; gap: 10px; align-items: center; margin: 10px 0; flex-wrap: wrap; }
+    .form-row input[type="date"], .form-row input[type="text"] {
+      flex: 1; padding: 8px; font-size: 16px; cursor: pointer;
+    }
+    .checkbox-row { margin: 10px 0; }
+    .btn {
+      display: inline-block;
+      padding: 10px 15px;
+      background: #25d366;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .btn:hover { background: #1ebd57; }
+  </style>
+</head>
+<body>
+  <div style="text-align:right; margin: 10px 20px;">
+    <a href="#" id="translate-es" style="text-decoration: none; font-size: 0.95em; color: #007bff; margin-right: 10px;">Traducir al español</a>
+    <a href="#" id="translate-en" style="display:none; text-decoration: none; font-size: 0.95em; color: #007bff;">Switch to English</a>
+  </div>
+  <div class="container">
+    <h1>TULUM VEHICLE RENTALS</h1>
+    <!-- SCOOTER CARD -->
+    <div class="scooter">
+      <img src="https://media.xmlcal.com/pic/p0022/9540/10.400.png" alt="Italika D125">
+      <div class="info">
+        <h2>Italika D125</h2>
+        <p><em>Price: $450 (1 day), $400/day (2–3 days), $380/day (4–5 days), $350/day (weekly).</em></p>
+        <p>Fits two passengers with a 150 kg max. load. 125cc engine, top speed 70 km/h.<br>Includes two helmets and storage box.<br>Requires motorcycle license. Max usage radius: 12 km (cenotes, beaches, lagoons).</p>
+        <div class="form-row">
+          <input type="text" id="name1" placeholder="Name and Surname">
+        </div>
+        <div class="form-row">
+          <input type="date" id="start1">
+          <input type="date" id="end1">
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="cb1"> <label for="cb1">I have a motorcycle license (Required, from any country)</label><br>
+          <input type="checkbox" id="cb1b"> <label for="cb1b">I agree to pay a 4000 MXN security deposit (or 200USD or 200EUR).</label>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a class="btn" id="link1" href="#" onclick="return sendWhatsApp('Italika D125', 'name1', 'start1', 'end1', 'cb1', 'cb1b')">Request via WhatsApp</a>
+          <span style="font-size: 0.9em; color: #666;">(check the boxes to continue)</span>
+        </div>
+        <p id="cost1" style="font-weight: bold; margin-top: 5px;"></p>
+      </div>
+    </div>
+
+    <!-- ATV CARD -->
+    <div class="scooter">
+      <img src="https://media.xmlcal.com/pic/p0022/9540/11.400.png" alt="Italika ATV180">
+      <div class="info">
+        <h2>Italika ATV180</h2>
+        <p><em>Price: $600 (1 day), $520/day (2–3 days), $480/day (4–5 days), $450/day (weekly).</em></p>
+        <p>180cc engine, 180 kg load, seats 2.<br>Includes two helmets and elastic cords for securing a backpack.<br>Requires motorcycle license. Usage limited to 12 km radius.</p>
+        <div class="form-row">
+          <input type="text" id="name2" placeholder="Name and Surname">
+        </div>
+        <div class="form-row">
+          <input type="date" id="start2">
+          <input type="date" id="end2">
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="cb2"> <label for="cb2">I have a motorcycle license (Required, from any country)</label><br>
+          <input type="checkbox" id="cb2b"> <label for="cb2b">I agree to pay a 4000 MXN security deposit (or 200USD or 200EUR).</label>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a class="btn" id="link2" href="#" onclick="return sendWhatsApp('Italika ATV180', 'name2', 'start2', 'end2', 'cb2', 'cb2b')">Request via WhatsApp</a>
+          <span style="font-size: 0.9em; color: #666;">(check the boxes to continue)</span>
+        </div>
+        <p id="cost2" style="font-weight: bold; margin-top: 5px;"></p>
+      </div>
+    </div>
+
+    <!-- BICYCLE CARD -->
+    <div class="scooter">
+      <img src="https://media.xmlcal.com/pic/p0022/9540/05.400.png" alt="Beach Style Bicycle" style="width: 40%; display: block; margin: auto; border: none;">
+      <div class="info">
+        <h2>Beach Style Bicycle</h2>
+        <p><em>Price: $150 (1 day), $135/day (2–3 days), $120/day (4–5 days), $90/day (weekly).</em></p>
+        <p>Beach-style, M size, 26” wheels, coaster brake, metal basket (max 5 kg).<br>Includes lock. Bring your own helmet/lights.<br>Color/model may vary — picture is illustrative.</p>
+        <div class="form-row">
+          <input type="text" id="name3" placeholder="Name and Surname">
+        </div>
+        <div class="form-row">
+          <input type="date" id="start3">
+          <input type="date" id="end3">
+        </div>
+        <div class="checkbox-row">
+          <input type="checkbox" id="cb3"> <label for="cb3">I agree to sign the Rental Contract at the moment the bicycle is delivered.</label>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <a class="btn" id="link3" href="#" onclick="return sendWhatsApp('Beach Style Bicycle', 'name3', 'start3', 'end3', 'cb3')">Request via WhatsApp</a>
+          <span style="font-size: 0.9em; color: #666;">(check the boxes to continue)</span>
+        </div>
+        <p id="cost3" style="font-weight: bold; margin-top: 5px;"></p>
+      </div>
+    </div>
+  </div>
+<script>
+function sendWhatsApp(vehicle, nameId, startId, endId, cb1, cb2 = null) {
+  const name = document.getElementById(nameId).value;
+  const start = document.getElementById(startId).value;
+  const end = document.getElementById(endId).value;
+  const ok1 = document.getElementById(cb1).checked;
+  const ok2 = cb2 ? document.getElementById(cb2).checked : true;
+  if (!name || !start || !end || !ok1 || !ok2) {
+    alert(document.getElementById('translate-es').style.display === 'none' ?
+      "Por favor completa todos los campos y acepta las condiciones." :
+      "Please fill in all fields and agree to the conditions.");
+    return false;
+  }
+  const isSpanish = document.getElementById('translate-es').style.display === 'none';
+  let message = isSpanish
+    ? `¡Hola! Quiero rentar una "${vehicle}" desde el ${start} hasta el ${end}, mi nombre es ${name}.`
+    : `Hi! I'd like to rent a "${vehicle}" from ${start} until ${end}, my name is ${name}.`;
+  if (vehicle === "Italika D125" || vehicle === "Italika ATV180") {
+    message += isSpanish
+      ? " Tengo licencia de motocicleta y aceptaré pagar el depósito de seguridad (4000MXN o 200USD o 200EUR)."
+      : " I have a motorcycle license and I will pay the security deposit (4000MXN or 200USD or 200 EUR).";
+  }
+  const phoneNumber = "529841816300";
+  const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  window.open(url, '_blank');
+  return false;
+}
+</script>
+<script>
+  document.getElementById('translate-es').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('translate-es').style.display = 'none';
+    document.getElementById('translate-en').style.display = 'inline';
+
+    document.querySelector('h1').textContent = 'ALQUILER DE VEHÍCULOS EN TULUM';
+
+    // Scooter
+    document.querySelector('h2').textContent = 'Italika D125';
+    document.querySelectorAll('.info')[0].querySelector('p em').textContent = 'Precio: $450 (1 día), $400/día (2–3 días), $380/día (4–5 días), $350/día (semanal).';
+    document.querySelectorAll('.info')[0].querySelectorAll('p')[1].innerHTML = 'Para dos pasajeros con carga máxima de 150 kg. Motor 125cc, velocidad máxima 70 km/h.<br>Incluye dos cascos y baúl trasero.<br>Requiere licencia de motocicleta. Radio de uso: 12 km (cenotes, playas, lagunas).';
+    document.querySelector('#cb1 + label').textContent = 'Tengo licencia de motocicleta (de cualquier país)';
+    document.querySelector('#cb1b + label').textContent = 'Acepto pagar un depósito de seguridad de 4000 MXN (o 200 USD o 200 EUR).';
+    document.querySelector('#link1').textContent = 'Solicitar por WhatsApp';
+
+    // ATV
+    document.querySelectorAll('h2')[1].textContent = 'Italika ATV180';
+    document.querySelectorAll('.info')[1].querySelector('p em').textContent = 'Precio: $600 (1 día), $520/día (2–3 días), $480/día (4–5 días), $450/día (semanal).';
+    document.querySelectorAll('.info')[1].querySelectorAll('p')[1].innerHTML = 'Motor 180cc, carga máxima 180 kg, para dos personas.<br>Incluye dos cascos y cuerdas elásticas para sujetar mochila.<br>Requiere licencia de motocicleta. Radio de uso: 12 km.';
+    document.querySelector('#cb2 + label').textContent = 'Tengo licencia de motocicleta (de cualquier país)';
+    document.querySelector('#cb2b + label').textContent = 'Acepto pagar un depósito de seguridad de 4000 MXN (o 200 USD o 200 EUR).';
+    document.querySelector('#link2').textContent = 'Solicitar por WhatsApp';
+
+    // Bicycle
+    document.querySelectorAll('h2')[2].textContent = 'Bicicleta de Playa';
+    document.querySelectorAll('.info')[2].querySelector('p em').textContent = 'Precio: $150 (1 día), $135/día (2–3 días), $120/día (4–5 días), $90/día (semanal).';
+    document.querySelectorAll('.info')[2].querySelectorAll('p')[1].innerHTML = 'Estilo playero, talla M, ruedas de 26”, freno contrapedal, canasta metálica (máx 5 kg).<br>Incluye candado. Trae tu propio casco/luces.<br>Color/modelo ilustrativo.';
+    document.querySelector('#cb3 + label').textContent = 'Acepto firmar el contrato de alquiler al momento de la entrega de la bicicleta';
+    document.querySelector('#link3').textContent = 'Solicitar por WhatsApp';
+
+    document.querySelectorAll('.btn + span').forEach(el => el.textContent = '(marca las casillas para continuar)');
+  });
+
+  document.getElementById('translate-en').addEventListener('click', function(e) {
+    e.preventDefault();
+    document.getElementById('translate-en').style.display = 'none';
+    document.getElementById('translate-es').style.display = 'inline';
+
+    document.querySelector('h1').textContent = 'TULUM VEHICLE RENTALS';
+
+    document.querySelector('h2').textContent = 'Italika D125';
+    document.querySelectorAll('.info')[0].querySelector('p em').textContent = 'Price: $450 (1 day), $400/day (2–3 days), $380/day (4–5 days), $350/day (weekly).';
+    document.querySelectorAll('.info')[0].querySelectorAll('p')[1].innerHTML = 'Fits two passengers with a 150 kg max. load. 125cc engine, top speed 70 km/h.<br>Includes two helmets and storage box.<br>Requires motorcycle license. Max usage radius: 12 km (cenotes, beaches, lagoons).';
+    document.querySelector('#cb1 + label').textContent = 'I have a motorcycle license (Required, from any country)';
+    document.querySelector('#cb1b + label').textContent = 'I agree to pay a 4000 MXN security deposit (or 200USD or 200EUR).';
+    document.querySelector('#link1').textContent = 'Request via WhatsApp';
+
+    document.querySelectorAll('h2')[1].textContent = 'Italika ATV180';
+    document.querySelectorAll('.info')[1].querySelector('p em').textContent = 'Price: $600 (1 day), $520/day (2–3 days), $480/day (4–5 days), $450/day (weekly).';
+    document.querySelectorAll('.info')[1].querySelectorAll('p')[1].innerHTML = '180cc engine, 180 kg load, seats 2.<br>Includes two helmets and elastic cords for securing a backpack.<br>Requires motorcycle license. Usage limited to 12 km radius.';
+    document.querySelector('#cb2 + label').textContent = 'I have a motorcycle license (Required, from any country)';
+    document.querySelector('#cb2b + label').textContent = 'I agree to pay a 4000 MXN security deposit (or 200USD or 200EUR).';
+    document.querySelector('#link2').textContent = 'Request via WhatsApp';
+
+    document.querySelectorAll('h2')[2].textContent = 'Beach Style Bicycle';
+    document.querySelectorAll('.info')[2].querySelector('p em').textContent = 'Price: $150 (1 day), $135/day (2–3 days), $120/day (4–5 days), $90/day (weekly).';
+    document.querySelectorAll('.info')[2].querySelectorAll('p')[1].innerHTML = 'Beach-style, M size, 26” wheels, coaster brake, metal basket (max 5 kg).<br>Includes lock. Bring your own helmet/lights.<br>Color/model may vary — picture is illustrative.';
+    document.querySelector('#cb3 + label').textContent = 'I agree to sign the Rental Contract at the moment the bicycle is delivered.';
+    document.querySelector('#link3').textContent = 'Request via WhatsApp';
+
+    document.querySelectorAll('.btn + span').forEach(el => el.textContent = '(check the boxes to continue)');
+  });
+</script>
+</body>
+</html>
